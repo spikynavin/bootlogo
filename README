@@ -1,0 +1,2 @@
+Psplash setup:
+$./make-image-header.sh <logo_pic.png ,jpg> POKY
