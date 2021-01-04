@@ -1,0 +1,19 @@
+Put png logo file and execute the script
+
+Create an image to suitable format
+
+1. create a new image fitting the size of your LCD (320x240, 480x272, 800x480 or 1024x768), with The Gimp (for example).
+
+2. save it in PPM RAW file format, let's say my_boot_logo.ppm
+
+3. install Netpbm package: 
+
+	$ sudo apt-get install netpbm
+
+4. reduce the number of colors in your image to 224:
+
+	$ ppmquant 224 my_boot_logo.ppm > my_boot_logo_224.ppm
+
+5. convert it to PPM ASCII format (if pnmnoraw is not available on your distribution (ex: LUbuntu 17.10), try with pnmtoplainpnm):
+
+	$ pnmnoraw my_boot_logo_224.ppm > my_boot_logo_ascii_224.ppm
